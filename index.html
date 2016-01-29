@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Matrix Multiplyer</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="stylesheet.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <button class="btn btn-success" type="submit" id="multiply">
+            Multiply!
+        </button>
+        <br>
+        <button type="button" class="btn btn-default" aria-label="Left Align" id="clear">
+            <span class="glyphicon glyphicon-refresh" aria-hidden="true">
+            </span>
+            Clear matrices
+        </button>
+        <br>
+        <form method="post" id="radioM">
+            <div class="btn-group" data-toggle="buttons" id="chooseM">
+                <label class="btn btn-info active optA">
+                    <input type="radio" name="options" id="optionA" value="a" autocomplete="off" checked>
+                    Matrix A
+                </label>
+                <label class="btn btn-info optB">
+                    <input type="radio" name="options" id="optionB" value="b" autocomplete="off">
+                    Matrix B
+                </label>
+            </div>
+        </form>
+        <br>
+        <div id="line1">
+            <button type="button" class="btn btn-default" aria-label="Left Align" id="addS">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true">
+                </span>
+                Add
+            </button>
+            <button type="button" class="btn btn-default" aria-label="Left Align" id="deleteS">
+                <span class="glyphicon glyphicon-minus" aria-hidden="true">
+                </span>
+                Delete
+            </button>
+            <span id="S">
+                string
+            </span>
+        </div>
+        <div id="line2">
+            <button type="button" class="btn btn-default" aria-label="Left Align" id="addC">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true">
+                </span>
+                Add
+            </button>
+            <button type="button" class="btn btn-default" aria-label="Left Align" id="deleteC">
+                <span class="glyphicon glyphicon-minus" aria-hidden="true">
+                </span>
+                Delete
+            </button>
+            <span id="C">
+                column
+            </span>
+        </div>
+    </nav>
+
+    <section>
+        <form class="form-inline addhere">
+                <div class="matrix Amatrix">
+                </div>
+                <img id="Msign" src="2000px-Multiplication_Sign.svg.png">
+                <div class="matrix Bmatrix">
+                </div>
+                <img id="Esign">
+                <div class="matrix Rmatrix">
+                </div>
+        </form>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="script.js" rel="text/javascript"></script>
+    <script src="node_modules/mathjs/dist/math.js" rel="script"></script>
+
+</body>
+</html>
